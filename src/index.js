@@ -3,10 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+  
+import "semantic-ui-css/semantic.min.css";
+import Login from "./login";
+import Register from "./register";
+import Addvideo from "./addvideo";
+import Ginto from "./kocha"
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Switch>
+        <Route path="/login" component={Login}/>
+        <Route path="/register" component={Register}/>
+        <Route path="/addvideo" component={Addvideo}/>
+        <Route path="/" component={App}/>
+        
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

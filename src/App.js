@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import { Form, Button, Header} from 'semantic-ui-react';
+import Video from "./video"
+import Ginto from "./kocha"
+
+
+import { Link } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Form >
+      <Header  >
+      <Button><Link to="/addvideo" >Add Video </Link></Button>
+      <Button><Link to="/Login" >Logout </Link></Button>  
+      </Header>
+     
+     <Video />
+     <Ginto />
+    
+      
+      
+      
+      </Form>
+      
   );
 }
 
